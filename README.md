@@ -17,7 +17,7 @@ Les fonctionnalités principales incluent :
 -----------------------------
 2. STRUCTURE DES FICHIERS
 -----------------------------
-
+```
 /projet/ (racine du projet)
 |
 +-- /css/
@@ -53,7 +53,7 @@ Les fonctionnalités principales incluent :
 |   +-- type.py                    (Script Python lié à la classification des types)
 |
 +-- README
-
+```
 
 -----------------------------
 3. PRÉREQUIS D'INSTALLATION
