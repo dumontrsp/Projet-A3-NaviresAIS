@@ -15,44 +15,45 @@ Les fonctionnalités principales incluent :
 -----------------------------
 2. STRUCTURE DES FICHIERS
 -----------------------------
+2. STRUCTURE DES FICHIERS
+-----------------------------
 
-'''/projet/ (racine du projet)
+/projet/ (racine du projet)
 |
 +-- /css/
-|   +-- style_clusters.css   (Feuille de style pour la visualisation des clusters)
-|   +-- style_fin.css        (Feuille de style principale)
+|   +-- style_clusters.css         (Feuille de style pour la visualisation des clusters)
+|   +-- style_fin.css              (Feuille de style principale)
 |
 +-- /html/
-|   +-- ajout.html           (Formulaire d'ajout de données)
-|   +-- index.html           (Page d'accueil)
-|   +-- visualisation.html   (Page de visualisation de la flotte)
+|   +-- ajout.html                 (Formulaire d'ajout de données)
+|   +-- index.html                 (Page d'accueil)
+|   +-- visualisation.html         (Page de visualisation de la flotte)
 |
 +-- /images/
 |   (Dossier contenant les images et icônes de l'application)
 |
 +-- /js/
-|   +-- script.js            (Scripts généraux pour les pages HTML)
-|   +-- script_prediction.js (Script pour la fonctionnalité de prédiction côté client)
-|   +-- visualisation.js     (Script pour la gestion de la carte interactive)
+|   +-- script.js                  (Scripts généraux pour les pages HTML)
+|   +-- script_prediction.js       (Script pour la fonctionnalité de prédiction côté client)
+|   +-- visualisation.js           (Script pour la gestion de la carte interactive)
 |
 +-- /php/
-|   +-- constants.php        (Fichier pour les constantes, ex: identifiants BDD)
-|   +-- database.php         (Script pour la connexion à la base de données)
-|   +-- enregistrer-bateau.php (Script de traitement du formulaire d'ajout)
-|   +-- prediction.php       (Script PHP principal pour gérer les appels de prédiction)
-|   +-- prediction_cluster.php (Script PHP pour l'analyse des clusters)
-|   +-- prediction_type.php  (Script PHP pour la prédiction de type)
-|   +-- visualisation.php    (Backend pour récupérer les données des navires)
+|   +-- constants.php              (Fichier pour les constantes, ex : identifiants BDD)
+|   +-- database.php               (Script pour la connexion à la base de données)
+|   +-- enregistrer-bateau.php     (Script de traitement du formulaire d'ajout)
+|   +-- prediction.php             (Script PHP principal pour gérer les appels de prédiction)
+|   +-- prediction_cluster.php     (Script PHP pour l'analyse des clusters)
+|   +-- prediction_type.php        (Script PHP pour la prédiction de type)
+|   +-- visualisation.php          (Backend pour récupérer les données des navires)
 |
 +-- /python/
-|   +-- clusters.py          (Script du modèle d'IA pour le clustering)
-|   +-- modele_trajectoire.py(Script du modèle d'IA pour les trajectoires)
-|   +-- prediction_traj.py   (Script de prédiction de trajectoire)
-|   +-- type.py              (Script Python lié à la classification des types)
+|   +-- clusters.py                (Script du modèle d'IA pour le clustering)
+|   +-- modele_trajectoire.py      (Script du modèle d'IA pour les trajectoires)
+|   +-- prediction_traj.py         (Script de prédiction de trajectoire)
+|   +-- type.py                    (Script Python lié à la classification des types)
 |
-+-- README.txt
-+-- ScriptSQL.txt             (Ce fichier)
-'''
++-- README
+
 
 -----------------------------
 3. PRÉREQUIS D'INSTALLATION
