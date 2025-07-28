@@ -17,6 +17,7 @@ This web application is a platform designed to monitor ships using their AIS dat
 ---
 
 ## 2. PROJECT FILE STRUCTURE
+```
 /project/ (root directory)
 |
 +-- /css/
@@ -52,7 +53,7 @@ This web application is a platform designed to monitor ships using their AIS dat
 | +-- type.py (Python script for ship type classification)
 |
 +-- README
-
+```
 ## 3. INSTALLATION REQUIREMENTS
 
 - A web server (e.g., Apache, Nginx)
