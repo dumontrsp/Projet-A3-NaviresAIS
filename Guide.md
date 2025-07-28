@@ -56,7 +56,6 @@ Ce projet transversal s’articule autour de trois grands axes :
 
 - Travail collaboratif en trinôme  
 - Gestion de projet avec diagramme de Gantt  
-- Partage et versioning via Git  
 - Livraison complète :  
   - Code commenté  
   - Maquettes et chartes graphiques  
