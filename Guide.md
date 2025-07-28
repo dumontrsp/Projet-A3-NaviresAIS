@@ -1,4 +1,7 @@
 # Guide du Projet
+## 🌐 Available Languages
+- [Français](Guide.md)
+- [English](Guide_EN.md)
 
 Projet réalisé en troisième année à l’ISEN Brest, en collaboration avec deux autres étudiants.  
 **Objectif principal** : concevoir une application complète pour l’analyse, la gestion, la visualisation et la prédiction de données AIS (Automatic Identification System) de navires circulant dans le golfe du Mexique.
