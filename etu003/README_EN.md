@@ -1,7 +1,7 @@
 # AIS-ShipTracking-WebApp
 ## 🌐 Available Languages
 - [Français](README.md)
-- [English](readmeEN_EN.md)
+- [English](readmeEN_EN.md) (you are here)
 
 
 Project completed during the 3rd year at ISEN Brest. It involves analysis, cleaning, and visualization of AIS (Automatic Identification System) data from ships in the Gulf of Mexico. Development of a web application with integrated AI models (clustering, classification, regression) to predict ship type and trajectory. Developed as a team of three students.
