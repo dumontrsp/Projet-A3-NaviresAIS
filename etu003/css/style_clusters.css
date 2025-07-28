@@ -1,0 +1,288 @@
+/* 1. Importation de la Police de Caractères depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap');
+
+/* 2. Définition des Variables Globales */
+:root {
+    /* 2.1 Palette de Couleurs */
+    --color-primary-dark: #0D2C4D;      /* Bleu Nuit Marin */
+    --color-secondary-accent: #00A6D6;  /* Bleu Azur Clair */
+    --color-background-main: #F5F5F5;   /* Blanc Coquillage */
+    --color-text-main: #4A5568;          /* Gris Acier */
+    --color-text-light: #D1D5DB;         /* Texte plus clair sur fond sombre */
+    --color-action-primary: #FF7F50;    /* Orange Sécurité */
+    --color-success: #28A745;            /* Vert Marin */
+    --color-error: #DC3545;              /* Rouge Alerte */
+    --color-white: #FFFFFF;
+    --color-border: #D1D5DB;             /* Bordure de champ par défaut */
+
+    /* 2.2 Typographie */
+    --font-title: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* 2.3 Espacements */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-6: 48px;
+
+    /* 2.4 Ombres et Élévation */
+    --shadow-standard: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    --shadow-hover: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    --shadow-focus: 0 0 0 3px rgba(0, 166, 214, 0.25); 
+    --shadow-header: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* 3. Styles de Base et Reset */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font: 400 16px/1.6 var(--font-body); 
+    color: var(--color-text-main);
+    background-color: var(--color-background-main);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 4. Styles de Typographie Globaux */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 var(--space-2) 0;
+    color: var(--color-primary-dark);
+}
+
+h1 { /* Titre Principal */
+    font: 700 36px var(--font-title);
+    margin-top: var(--space-6);
+}
+
+h2 { /* Titre de Section */
+    font: 700 28px var(--font-title);
+    margin-top: var(--space-4);
+}
+
+h3 { /* Sous-titre */
+    font: 600 20px var(--font-body);
+}
+
+p {
+    margin-bottom: var(--space-2);
+}
+
+a {
+    color: var(--color-secondary-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+/* 5. Mise en Page Générale (Header, Footer, Container) */
+.main-header {
+    height: 80px;
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: 0 var(--space-4);
+    box-shadow: var(--shadow-header);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header .nav-links a {
+    color: var(--color-white);
+    font-weight: 600;
+    font-family: var(--font-body);
+    margin-left: var(--space-3);
+    text-decoration: none;
+    padding-bottom: var(--space-1);
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.main-header .nav-links a:hover {
+    border-bottom-color: var(--color-secondary-accent);
+}
+
+.main-footer {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-light);
+    padding: var(--space-4);
+    text-align: center;
+}
+
+.main-footer a {
+    color: var(--color-text-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-4);
+}
+
+/* 6. Composants UI (Boutons, Formulaires, etc.) */
+
+/* 6.1 Boutons */
+.btn {
+    display: inline-block;
+    padding: 12px var(--space-3);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
+
+/* Bouton Primaire (Action) */
+.btn-primary {
+    background-color: var(--color-action-primary);
+    color: var(--color-white);
+    box-shadow: var(--shadow-standard);
+}
+
+.btn-primary:hover {
+    background-color: #E67148; /* Orange Sécurité un peu plus foncé */
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+/* Bouton Secondaire (Contour) */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
+/* États communs des boutons */
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+
+/* 6.2 Formulaires */
+.form-group {
+    margin-bottom: var(--space-3);
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px; 
+    margin-bottom: var(--space-1);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--color-text-main);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--color-secondary-accent);
+    box-shadow: var(--shadow-focus);
+}
+
+.form-control:disabled {
+    background-color: #E5E7EB;
+    cursor: not-allowed;
+}
+
+/* Spécifique pour les select pour afficher la flèche */
+select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px 12px;
+}
+
+/* 6.3 Messages d'alerte */
+.form-message {
+    font-size: 12px;
+    margin-top: var(--space-1);
+    display: block;
+}
+
+.error-message {
+    color: var(--color-error);
+}
+
+.success-message {
+    color: var(--color-success);
+}
+
+.form-control.is-invalid {
+    border-color: var(--color-error);
+}
+
+/* 7. Utilitaires */
+.shadow-standard {
+    box-shadow: var(--shadow-standard);
+}
+
+.card {
+    background-color: var(--color-white);
+    padding: var(--space-3);
+    border-radius: 8px;
+    box-shadow: var(--shadow-standard);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+}
+
+/* 8. Iconographie (avec Lucide Icons) */
+.icon {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2px;
+    color: var(--color-text-main);
+    vertical-align: middle;
+    transition: color 0.3s ease;
+}
+
+a:hover .icon, .btn:hover .icon {
+    color: var(--color-secondary-accent); /* Couleur interactive */
+}

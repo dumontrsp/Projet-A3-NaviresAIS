@@ -1,0 +1,117 @@
+<!DOCTYPE html> <!-- Déclaration du type de document HTML5 -->
+<html lang="fr"> <!-- Début du document HTML en langue française -->
+
+<head>
+  <!-- Encodage des caractères en UTF-8 -->
+  <meta charset="UTF-8">
+  
+  <!-- Responsive : adapte la mise en page à la taille de l'écran -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <!-- Import de la police Montserrat depuis Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+
+  <!-- Titre affiché dans l'onglet du navigateur -->
+  <title>Visualisation bateau</title>
+
+  <!-- Feuille de style Mapbox pour la carte interactive -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.css" rel="stylesheet">
+
+  <!-- Script JS de Mapbox pour gérer la carte -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.js"></script>
+
+  <!-- Script JS personnalisé pour la page de visualisation (chargé en différé) -->
+  <script defer src="../js/visualisation.js"></script>
+
+  <!-- Feuille de style personnalisée du projet -->
+  <link rel="stylesheet" href="../css/style_fin.css"> 
+
+  <!-- Icône du site (favicon) -->
+  <link rel="shortcut icon" href="../images/logo_track_ocean.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- ===================== CONTENEUR PRINCIPAL ===================== -->
+  <main class="main-container">
+
+    <!-- ===================== EN-TÊTE ===================== -->
+    <header class="site-header">
+      <!-- Logo du site -->
+      <div class="logo">
+        <img src="../images/logo_track_ocean.png" alt="Logo">
+      </div>
+
+      <!-- Navigation vers les autres pages -->
+      <nav class="header-text">
+        <a href="index.html" class="bloc_action">Accueil</a>
+        <a href="ajout.html" class="bloc_action">Ajout de données</a>
+      </nav>
+    </header>
+
+    <!-- ===================== SECTION DE VISUALISATION ===================== -->
+    <section class="visualisation-section">
+      <!-- Titre principal de la section -->
+      <h1>Visualisation des navires sur une carte</h1>
+
+      <!-- Conteneur de la carte Mapbox -->
+      <div id="map-container" style="height: 500px; width: 100%;"></div>
+
+      <!-- Bouton pour actualiser les données -->
+      <div class="controls">
+        <button id="btn-actualiser" onclick="actualiserDonnees()">Actualiser</button>
+      </div>
+
+      <!-- ===================== TABLEAU DES DONNÉES DES BATEAUX ===================== -->
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Choix</th>
+            <th>MMSI</th>
+            <th>Horodatage</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>SOG</th>
+            <th>COG</th>
+            <th>Cap</th>
+            <th>Nom</th>
+            <th>État</th>
+            <th>Longueur</th>
+            <th>Largeur</th>
+            <th>Tirant d'eau</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Lignes ajoutées dynamiquement via JS -->
+        </tbody>
+      </table>
+
+      <!-- ===================== CLUSTERISATION GLOBALE ===================== -->
+      <div class="prediction-buttons">
+        <h3 style="margin-top: 0;">Analyse Globale de la Flotte</h3>
+        <a id="btn-cluster" href="../php/prediction_cluster.php" target="_blank">Affichage des Clusters</a>
+      </div>
+
+      <!-- ===================== PRÉDICTIONS INDIVIDUELLES ===================== -->
+      <div class="prediction-buttons" style="border-top: 1px solid #e2e8f0; padding-top: 24px;">
+        <h3 style="margin-top: 0;">Prédictions pour le bateau sélectionné :</h3>
+        <p>Veuillez d'abord sélectionner un bateau dans le tableau ci-dessus.</p>
+
+        <!-- Formulaire pour envoyer le MMSI sélectionné au serveur -->
+        <form id="predictionForm" action="../php/prediction.php" method="POST" target="_blank">
+          <input type="hidden" name="mmsi" id="selectedMMSI"> <!-- Champ caché avec le MMSI -->
+
+          <!-- Boutons de prédiction -->
+          <button id="btn-predict-type" type="submit" name="prediction_type" value="type">Prédire le Type</button>
+          <button id="btn-predict-trajectory" type="submit" name="prediction_type" value="trajectoire">Prédire la trajectoire</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="site-footer">
+    <p class="footer-text">Amandine KERLEROUX | Raphael DUMONT | Ryan TEGLIA</p>
+    <span class="help-icon">?</span> <!-- Icône d’aide ou d’information -->
+  </footer>
+</body>
+</html>

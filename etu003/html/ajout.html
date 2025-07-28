@@ -1,0 +1,136 @@
+<!DOCTYPE html> <!-- Déclaration du type de document HTML5 -->
+<html lang="fr"> <!-- Début du document HTML, langue définie sur le français -->
+<head>
+    <meta charset="utf-8"> <!-- Encodage des caractères en UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design pour les appareils mobiles -->
+    <meta name="author" content="Teglia Ryan"> <!-- Auteur de la page -->
+
+    <title>Ajouter un Bateau - Projet Maritime</title> <!-- Titre de la page affiché dans l'onglet du navigateur -->
+
+    <!-- Liens vers les polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Icône de l'onglet (favicon) -->
+    <link rel="shortcut icon" href="../../images/logo_track_ocean.png" type="image/x-icon">
+
+    <!-- Feuille de style CSS externe -->
+    <link rel="stylesheet" href="../css/style_fin.css">
+
+    <!-- Fichier JavaScript externe -->
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <!-- En-tête du site avec le logo et le menu de navigation -->
+    <header>
+        <a href="accueil.html" class="logo-link img">
+            <img src="../../images/logo_track_ocean.jpg" alt="Logo TrackOcean">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="visualisation.html">Visualisation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenu principal de la page -->
+    <main>
+        <!-- Section contenant le formulaire d'ajout de bateau -->
+        <section class="form-container">
+            <h2>Informations du bateau</h2>
+            <form id="add-boat-form"  method="post">
+
+                <!-- Champ pour le MMSI -->
+                <div class="form-group">
+                    <label for="mmsi">MMSI</label>
+                    <input id="mmsi" name="mmsi" type="text" placeholder="Ex: 227123456" inputmode="numeric" pattern="[0-9]{9}" title="L'identifiant MMSI doit contenir exactement 9 chiffres." required autofocus>
+                </div>
+                
+                <!-- Champ pour le nom du bateau -->
+                <div class="form-group">
+                    <label for="name">Nom du bateau</label>
+                    <input id="name" name="name" type="text" placeholder="Ex: ISLAND QUEEN" required>
+                </div>
+
+                <!-- Champ pour la vitesse sur le fond (SOG) -->
+                <div class="form-group">
+                    <label for="sog">Vitesse sur le fond (SOG)</label>
+                    <input id="sog" name="sog" type="text" placeholder="Ex: 5.6" inputmode="decimal" pattern="[0-9]+([.,][0-9]+)?" title="Veuillez entrer un nombre.">
+                </div>
+
+                <!-- Champ pour la route sur le fond (COG) -->
+                <div class="form-group">
+                    <label for="cog">Route sur le fond (COG)</label>
+                    <input id="cog" name="cog" type="text" placeholder="Ex: 176.5" inputmode="decimal" pattern="[0-9]+([.,][0-9]+)?" title="Veuillez entrer un nombre.">
+                </div>
+
+                <!-- Champ pour le cap (heading) -->
+                <div class="form-group">
+                    <label for="heading">Heading</label>
+                    <input id="heading" name="heading" type="text" placeholder="Ex: 45" inputmode="decimal" pattern="[0-9]+([.,][0-9]+)?" title="Veuillez entrer un nombre.">
+                </div>
+
+                <!-- Champ pour la latitude -->
+                <div class="form-group">
+                    <label for="latitude">Latitude</label>
+                    <input id="latitude" name="latitude" type="text" placeholder="Ex: 25.76775" inputmode="decimal" pattern="-?[0-9]+([.,][0-9]+)?" title="Veuillez entrer une coordonnée valide.">
+                </div>
+
+                <!-- Champ pour la longitude -->
+                <div class="form-group">
+                    <label for="longitude">Longitude</label>
+                    <input id="longitude" name="longitude" type="text" placeholder="Ex: -80.14296" inputmode="decimal" pattern="-?[0-9]+([.,][0-9]+)?" title="Veuillez entrer une coordonnée valide.">
+                </div>
+
+                <!-- Menu déroulant pour l'état de navigation -->
+                <div class="form-group">
+                    <label for="state">État de navigation</label>
+                    <select id="state" name="state" required>
+                        <option value="" disabled selected>Choisir un état...</option>
+                        <option value="naviguant">Naviguant</option>
+                        <option value="ancre">À l'ancre</option>
+                        <option value="amarre">Amarré</option>
+                    </select>
+                </div>
+
+                <!-- Champ pour le tirant d'eau -->
+                <div class="form-group">
+                    <label for="draft">Tirant d'eau (en mètres)</label>
+                    <input id="draft" name="draft" type="text" placeholder="Ex: 10.5" inputmode="decimal" pattern="[0-9]+([.,][0-9]+)?" title="Veuillez entrer un nombre.">
+                </div>
+
+                <!-- Champ pour la longueur du bateau -->
+                <div class="form-group">
+                    <label for="length">Longueur (en mètres)</label>
+                    <input id="length" name="length" type="text" placeholder="Ex: 150" inputmode="decimal" pattern="[0-9]+([.,][0-9]+)?" title="Veuillez entrer un nombre.">
+                </div>
+
+                <!-- Champ pour la largeur du bateau -->
+                <div class="form-group">
+                    <label for="width">Largeur (en mètres)</label>
+                    <input id="width" name="width" type="text" placeholder="Ex: 32" inputmode="decimal" pattern="[0-9]+([.,][0-9]+)?" title="Veuillez entrer un nombre.">
+                </div>
+                
+                <!-- Champ pour la date et l'heure de la relève -->
+                <div class="form-group">
+                    <label for="date">Date et heure de la relève</label>
+                    <input id="date" name="date" type="datetime-local" required>
+                </div>
+
+                <!-- Bouton pour soumettre le formulaire -->
+                <button id="boutton_enregistrer" type="submit">Enregistrer le bateau</button>
+
+            </form>
+        </section>
+    </main>
+
+    <!-- Pied de page (actuellement vide) -->
+    <footer>
+
+    </footer>
+
+</body>
+</html>

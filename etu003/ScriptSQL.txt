@@ -1,0 +1,45 @@
+#------------------------------------------------------------
+# Table: statut_navigation
+#------------------------------------------------------------
+CREATE TABLE statut_navigation(
+    id_statut      INT NOT NULL,
+    libelle_statut VARCHAR(255) NOT NULL,
+    CONSTRAINT statut_navigation_PK PRIMARY KEY (id_statut)
+) ENGINE=InnoDB;
+
+#------------------------------------------------------------
+# Table: bateau
+#------------------------------------------------------------
+CREATE TABLE bateau(
+    id_bateau  INT NOT NULL,
+    MMSI       VARCHAR(9) NOT NULL,
+    IMO        VARCHAR(9) NOT NULL,
+    VesselName VARCHAR(255) NOT NULL,
+    Lenght     INT NOT NULL,
+    Width      INT NOT NULL,
+    Draft      INT NOT NULL,
+    id_type    INT NOT NULL,
+    CONSTRAINT bateau_PK PRIMARY KEY (id_bateau)
+    -- La colonne id_releve et sa clé étrangère ont été supprimées pour corriger la référence circulaire.
+) ENGINE=InnoDB;
+
+#------------------------------------------------------------
+# Table: releve_ais
+#------------------------------------------------------------
+CREATE TABLE releve_ais(
+    id_releve      INT NOT NULL,
+    BaseDateTime   DATETIME NOT NULL,
+    Latitude       DECIMAL(9, 6) NOT NULL,
+    Longitude      DECIMAL(9, 6) NOT NULL,
+    SOG            DECIMAL(4, 1) NOT NULL,
+    COG            DECIMAL(4, 1) NOT NULL,
+    Heading        DECIMAL(4, 1) NOT NULL,
+    id_bateau      INT NOT NULL,
+    id_statut      INT NOT NULL,
+    CONSTRAINT releve_ais_PK PRIMARY KEY (id_releve),
+    -- Ajout des contraintes de clés étrangères correctes
+    CONSTRAINT releve_ais_bateau_FK FOREIGN KEY (id_bateau) REFERENCES bateau(id_bateau),
+    CONSTRAINT releve_ais_statut_navigation_FK FOREIGN KEY (id_statut) REFERENCES statut_navigation(id_statut)
+) ENGINE=InnoDB;
+
+

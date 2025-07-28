@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <!-- Responsive : adapte la mise en page aux différents appareils (mobiles, tablettes, ordinateurs) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Importation de la police Google Fonts : Montserrat -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+
+        <!-- Lien vers la feuille de style CSS principale -->
+        <link href="../css/style_fin.css" rel="stylesheet" />
+
+        <!-- Titre de l'onglet -->
+        <title>Accueil</title>
+
+        <!-- Icône de l’onglet (favicon) -->
+        <link rel="shortcut icon" href="../images/logo_track_ocean.png" type="image/x-icon">
+    </head>
+
+<body>
+    <div class="main-container"> <!-- Conteneur principal de la page -->
+
+        <!-- ====================== HEADER ====================== -->
+        <header class="site-header"> <!-- En-tête du site avec logo et navigation -->
+            <div class="logo"> <!-- Logo du site -->
+                <img src="../images/logo_track_ocean.png">
+            </div>
+
+            <div class="header-text"> <!-- Liens de navigation -->
+                <a href="ajout.html" class="bloc_action">Ajout de données</a>
+                <a href="visualisation.html" class="bloc_action">Visualisation</a>
+            </div>
+        </header>
+
+        <!-- ================== SECTION CENTRALE ================== -->
+        <div class="header-section"> <!-- Section centrale principale -->
+            <div class="content-section"> <!-- Contenu texte + image de présentation -->
+                <div class="content-area">
+                    <h1 class="main-title"><u>TrackOcean – L'innovation aux service des océans</u></h1><br><br>
+
+                    <div class="intro-section"> <!-- Zone avec image d’introduction et texte -->
+                        <div class="main-image">
+                            <img src="../images/v14_42.png">
+                        </div> 
+
+                        <p class="description-text"> <!-- Texte descriptif du projet -->
+                            Cette plateforme interactive permet de suivre en temps réel la position et le comportement des navires grâce aux données AIS (Automatic Identification System) dans le golfe du Mexique. En combinant géolocalisation, vitesse, direction et caractéristiques des navires, l’outil propose une visualisation claire des trajectoires maritimes, une classification automatique des comportements, ainsi que des prédictions avancées. L’objectif est d’offrir une interface simple et intuitive pour explorer les mouvements maritimes et mieux comprendre les dynamiques de navigation.
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        </p>
+                    </div>
+
+                    <!-- =================== CARTES INTERACTIVES =================== -->
+                    <div class="cards-container"> <!-- Zone avec cartes cliquables -->
+                        <!-- Carte : Accès à la page d’ajout de données -->
+                        <a href="ajout.html" class="card-block">
+                            <div class="card card-1">
+                                <img src="../images/v14_57.png">
+                            </div>
+                            <span class="card-label">Ajout de Données</span>
+                        </a>
+
+                        <!-- Carte : Accès à la visualisation des données -->
+                        <a href="visualisation.html" class="card-block">
+                            <div class="card card-2">
+                                <img src="../images/v15_59.png">
+                            </div>
+                            <span class="card-label">Visualisation Bateau</span>
+                        </a>
+                    </div>
+
+        <!-- ====================== FOOTER ====================== -->
+        <footer class="site-footer"> <!-- Pied de page -->
+            <p class="footer-text">Amandine KERLEROUX | Raphael DUMONT | Ryan TEGLIA</p>
+            <span class="help-icon">?</span> <!-- Icône d’aide ou de support -->
+        </footer>
+    </div>
+</body>
