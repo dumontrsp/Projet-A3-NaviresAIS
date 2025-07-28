@@ -1,6 +1,6 @@
 # Guide du Projet
 ## 🌐 Langues Disponibles
-- [Français](Guide.md)
+- [Français](Guide.md) (vous êtes ici)
 - [English](Guide_EN.md)
 
 Projet réalisé en troisième année à l’ISEN Brest, en collaboration avec deux autres étudiants.  
