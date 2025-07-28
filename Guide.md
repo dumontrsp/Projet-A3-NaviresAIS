@@ -1,34 +1,77 @@
-Guide du Projet
-Ce projet a été réalisé en troisième année à l’ISEN Brest, au sein d’une équipe de trois étudiants. L’objectif principal : concevoir une application complète pour l’analyse, la gestion, la visualisation et la prédiction liées aux données AIS (Automatic Identification System) de navires circulant dans le golfe du Mexique.
+# Guide du Projet
 
-Contexte et objectifs
-Ce projet transverse regroupe trois grands axes :
+Projet réalisé en troisième année à l’ISEN Brest, en collaboration avec deux autres étudiants.  
+**Objectif principal** : concevoir une application complète pour l’analyse, la gestion, la visualisation et la prédiction de données AIS (Automatic Identification System) de navires circulant dans le golfe du Mexique.
 
-Traitement Big Data des fichiers bruts AIS pour extraire, nettoyer et analyser les données massives issues des balises de navires.
+---
 
-Intelligence Artificielle pour la modélisation, la classification des types de navires, le regroupement de comportements (clustering) et la prédiction de trajectoires à partir des caractéristiques historiques.
+## Contexte et Objectifs
 
-Développement Web, cœur de ce dépôt : création d’un site interactif permettant de manipuler ces données, d’y appliquer les modèles IA préparés, et d’offrir une interface ergonomique et moderne d’exploration.
+Ce projet transversal s’articule autour de trois grands axes :
 
-Le projet vise à approfondir les compétences en analyse de données, IA appliquée et développement web full-stack (front HTML/CSS/JS, back PHP/MySQL, communication AJAX/JSON).
+1. **Traitement Big Data**  
+   - Extraction, nettoyage et analyse des fichiers bruts AIS  
+   - Exploitation de données massives issues des balises de navires
 
-Fonctionnalités principales
-Ajout & gestions des navires : formulaire pour enregistrer de nouveaux navires avec toutes leurs données principales, gestion et modification via la base MySQL.
+2. **Intelligence Artificielle**  
+   - Modélisation et classification des types de navires  
+   - Regroupement de comportements (clustering)  
+   - Prédiction de trajectoires à partir des historiques
 
-Tableaux et visualisation : affichage de tous les navires stockés sous forme de tableau dynamique et de carte interactive (Plotly, Mapbox), recherche par filtres et accès aux détails par clic/survol.
+3. **Développement Web**  
+   - Création d’un site interactif  
+   - Application des modèles IA  
+   - Interface ergonomique et moderne pour l’exploration des données
 
-Prédictions IA : déclenchement, via l’interface, des scripts Python de prédiction (cluster, type, trajectoire), avec restitution directe des résultats au sein de l’application web.
+**Compétences visées** : analyse de données, intelligence artificielle appliquée, développement web full-stack (HTML/CSS/JS côté front-end, PHP/MySQL côté back-end, communication via AJAX/JSON).
 
-Statistiques et vues synthétiques : visualisation de statistiques simples, histogrammes, répartition par type, ports, etc.
+---
 
-Structuration claire du code : séparation front (HTML/CSS/JS), back (PHP), scripts IA (Python), fichiers SQL, structure arborescente commentée pour faciliter la maintenance et la compréhension.
+## Fonctionnalités Principales
 
-Organisation
-Travail collaboratif en trinôme, gestion de projet avec Gantt, partage sous Git, livraison de code commenté, maquettes, chartes graphiques, modèles de bases de données, scripts d’installation et rapport d’analyse.
+- **Ajout et gestion des navires**  
+  Formulaire d’enregistrement des navires, modification et gestion via une base de données MySQL.
 
-L’application web produite est autonome et exploitable sur tout serveur PHP/MySQL compatible, avec scripts Python prêt à être connectés.
+- **Tableaux et visualisation**  
+  Affichage des navires sous forme de tableau dynamique et de carte interactive (Plotly, Mapbox).  
+  Fonction de recherche par filtres, affichage des détails au clic ou survol.
 
-Informations complémentaires
-Ce dépôt contient exclusivement la partie web (front-end & back-end). Les travaux avancés sur la Big Data et l’intelligence artificielle ainsi que les jeux de données traités sont disponibles sur demande pour les personnes intéressées à approfondir ces aspects techniques.
+- **Prédictions IA**  
+  Déclenchement des scripts Python (classification, clustering, prédiction de trajectoire) depuis l’interface, avec restitution directe dans l’application.
 
-Pour toute question, voir des exemples ou obtenir les éléments complémentaires, contactez-moi directement.
+- **Statistiques et vues synthétiques**  
+  Visualisation de statistiques simples : histogrammes, répartitions par type de navire, ports, etc.
+
+- **Structuration claire du code**  
+  Séparation des composants :  
+  - Front-end : HTML, CSS, JavaScript  
+  - Back-end : PHP  
+  - Scripts IA : Python  
+  - Base de données : fichiers SQL  
+  Arborescence commentée pour faciliter la compréhension et la maintenance.
+
+---
+
+## Organisation du Projet
+
+- Travail collaboratif en trinôme  
+- Gestion de projet avec diagramme de Gantt  
+- Partage et versioning via Git  
+- Livraison complète :  
+  - Code commenté  
+  - Maquettes et chartes graphiques  
+  - Modèle de base de données  
+  - Scripts d’installation  
+  - Rapport d’analyse
+
+L’application web est autonome, déployable sur tout serveur compatible PHP/MySQL, avec scripts Python facilement connectables.
+
+---
+
+## Informations Complémentaires
+
+Le dépôt contient exclusivement la partie web (front-end et back-end).  
+Les modules liés au traitement Big Data, à l’intelligence artificielle ainsi que les jeux de données sont disponibles sur demande pour toute personne souhaitant approfondir les aspects techniques.
+
+Pour toute question ou demande d’accès aux éléments complémentaires, merci de me contacter directement.
+
