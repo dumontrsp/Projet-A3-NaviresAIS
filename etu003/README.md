@@ -1,6 +1,6 @@
 # Projet-A3-NaviresAISweb
 
-## 🌐 Available Languages
+## 🌐 Langues Disponibles
 - 🇫🇷 Français (vous êtes ici)
 - [🇬🇧 English version](README_EN.md)
 
