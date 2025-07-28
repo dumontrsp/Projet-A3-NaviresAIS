@@ -16,7 +16,7 @@ Les fonctionnalités principales incluent :
 2. STRUCTURE DES FICHIERS
 -----------------------------
 
-/projet/ (racine du projet)
+'''/projet/ (racine du projet)
 |
 +-- /css/
 |   +-- style_clusters.css   (Feuille de style pour la visualisation des clusters)
@@ -52,7 +52,7 @@ Les fonctionnalités principales incluent :
 |
 +-- README.txt
 +-- ScriptSQL.txt             (Ce fichier)
-
+'''
 
 -----------------------------
 3. PRÉREQUIS D'INSTALLATION
