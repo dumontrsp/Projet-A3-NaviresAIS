@@ -1,5 +1,5 @@
 # Guide du Projet
-## 🌐 Available Languages
+## 🌐 Langues Disponibles
 - [Français](Guide.md)
 - [English](Guide_EN.md)
 
